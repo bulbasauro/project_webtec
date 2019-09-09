@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<title>Manipulando o DOM do HTML via JS</title>
 </head>
 <body>
-    <p>teste valida comandos git</p>
+<!-- Script JS -->
+<script>
+let nome = 'Jurupinga';
+let mensagem = `Bem-vindo à aula de Manipulação de DOM, ${nome}`;
+var div = document.createElement('div');
+div.textContent = mensagem;
+div.style.backgroundColor = 'green';
+div.style.color = 'white';
+document.body.appendChild(div);
+</script>
 </body>
 </html>
