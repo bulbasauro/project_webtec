@@ -1,5 +1,6 @@
 const {I} = inject();
-const baseUrl = 'file:///C:/Users/ana_p/Ana_Projetos/project_webtec';
+//const baseUrl = 'file:///C:/Users/ana_p/Ana_Projetos/project_webtec';
+const baseUrl = 'file:///D:/GitHub/project_webtec/src/';
 
 Feature('default');
 
