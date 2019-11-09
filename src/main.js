@@ -1,3 +1,5 @@
+const body = document.body;
+
 var tit = document.getElementById('titulo');
 tit.innerHTML='Teste Imagem com HTML'
 var bulba = document.getElementById('imagem');
