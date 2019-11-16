@@ -1,6 +1,7 @@
 const listaImagens = [
     './imagens/bulbasaurs_01.jpg',
-    './imagens/bulbasaurs_02.jpg'
+    './imagens/bulbasaurs_02.jpg',
+    './imagens/bulbasaurs_03.jpg'
 ];
 var indexImagem = 0;
 const img_imagem = document.getElementById('imagem');
@@ -19,16 +20,17 @@ function confirmarTituloImagem() {
 
 function mudarImagem(e) {
     const rect = img_imagem.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    /*const input_titulo = document.getElementById('input_titulo');
-    input_titulo.value = x;*/
-    if (x <= 150) {
+    const x = e.clientX;
+    const y = e.clientY;
+    const input_titulo = document.getElementById('input_titulo');
+    //input_titulo.value = `${rect.left} / ${rect.right}`;
+    //input_titulo.value += ` / ${e.clientX}`;
+    if (x <= (rect.left + 150)) {
         indexImagem--;
         if (indexImagem < 0) {
             indexImagem = listaImagens.length - 1;
         }
-    } else if (x >= rect.right-150) {
+    } else if (x >= rect.right - 150) {
         indexImagem++;
         if (indexImagem >= listaImagens.length) {
             indexImagem = 0;
