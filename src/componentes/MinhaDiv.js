@@ -22,7 +22,7 @@ export default class MinhaDiv extends HTMLElement {
         this.shadowRoot.innerHTML = `
        
             <p>Minha Div  FEIA</p>
-            Minha-div: ${this.profileName}
+            <p>Minha-div: ${this.profileName}</p>
 
        `;
     }
