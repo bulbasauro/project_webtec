@@ -1,14 +1,10 @@
 /*
-PascalCase
-camelCase
-kebab-case
-_snake_case
-const API_URL
+PascalCase / camelCase / kebab-case / _snake_case / const API_URL
 */
 /*
 export class MinhaDiv {
-    constructor(nome) 
-        this.nome = nome 
+    constructor(name) {
+        this.name = name 
     }
 }*/
 export default class MinhaDiv extends HTMLElement {
@@ -18,15 +14,19 @@ export default class MinhaDiv extends HTMLElement {
         //this.profileName;
 
         this.attachShadow({ mode: 'open' });
-
+        this.userInfo = [];
+        this.buscarUsuario();
         this.shadowRoot.innerHTML = `
-       
-            <p>Minha Div  FEIA</p>
-            <p>Minha-div: ${this.profileName}</p>
-
+            <p>Minha Div: Leafeon e ${this.profileName} --> Meu usuário é: ${this.userInfo.name}</p>
        `;
     }
 
+    buscarUsuario() {
+        fetch(`https://api.github.com/users/${this.profileName}`)
+            .then(res => res.json())
+            .then(json => this.userInfo.push(json));
+    }
+   
     get profileName() {
         return this.getAttribute('profile');
     }
