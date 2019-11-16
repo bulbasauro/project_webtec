@@ -1,0 +1,30 @@
+html {              /*mudar página*/
+    background-color: rgb(183, 247, 202);
+}
+
+body {              /*mudar o corpo do site (minha-div)*/
+    color: rgb(170, 12, 12);
+}
+
+h1 {                /*título principal*/
+    color: rgb(14, 105, 14);
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+img {               /*imagem*/
+    width: 38%;
+    border: 2px black solid;
+    margin: 0.5em;
+    padding: 0.5em;
+    display: block;
+    margin: 0 auto;
+}
+
+p {                 /*parágrafo abaixo da imagem*/
+    color: black;
+    text-align: left;
+    font-size: 20px;
+}
